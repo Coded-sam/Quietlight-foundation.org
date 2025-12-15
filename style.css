@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+header.glass {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.15);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+nav a.highlight {
+    color: #f4b400;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 100vh;
+    background: url("./imagehero.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    max-width: 650px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+}
+
+/* BUTTON */
+.btn-primary {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 32px;
+    background: #f4b400;
+    color: #000;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #e0a800;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section.dark {
+    background: #111;
+    color: mistyrose;
+}
+
+/* ================= CARDS ================= */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    width: 260px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.section.dark .card {
+    background: #1c1c1c;
+}
+
+/* ================= IMAGE SLIDER ================= */
+.slider {
+    overflow: hidden;
+    height: 320px;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slide 9s infinite;
+}
+
+.slides img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+}
+
+/* ================= STATS / COUNTERS ================= */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 100px 20px;
+}
+
+.stat-box {
+    text-align: center;
+    min-width: 180px;
+}
+
+.stat-box h3 {
+    font-size: 42px;
+    color: #f4b400;
+}
+
+.stat-box p {
+    margin-top: 5px;
+}
+
+/* ================= VIDEO ================= */
+.video-box iframe {
+    width: 80%;
+    height: 420px;
+    border-radius: 18px;
+}
+
+/* ================= GALLERY ================= */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= DONATION PAGE ================= */
+.donate {
+    background: linear-gradient(135deg, #fff6d5, #ffffff);
+}
+
+.donation-box {
+    background: white;
+    max-width: 420px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+.donation-box img {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+/* TRUST BADGE */
+.trust-badge {
+    background: #e9f7ef;
+    color: #155724;
+    padding: 10px;
+    border-radius: 14px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* BTC COPY */
+.btc-box {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.btc-copy {
+    display: flex;
+    gap: 10px;
+    background: #f1f1f1;
+    padding: 12px;
+    border-radius: 14px;
+}
+
+.btc-copy span {
+    flex: 1;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+#copyBtn {
+    background: #f4b400;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* WHATSAPP */
+.whatsapp-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 14px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* TRANSACTION FORM */
+.tx-form {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.tx-form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+}
+
+.tx-form button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px;
+    background: #333;
+    color: white;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================= TOAST ================= */
+#toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #333;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+    z-index: 2000;
+}
+
+#toast.show {
+    opacity: 1;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #111;
+    color: #ddd;
+    padding: 60px 20px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer h3, .footer h4 {
+    color: #f4b400;
+}
+
+.footer a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin-top: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+/* ================= ANIMATIONS ================= */
+.fade-up, .fade-down {
+    opacity: 0;
+    transition: 1s;
+}
+
+.fade-up {
+    transform: translateY(40px);
+}
+
+.fade-down {
+    transform: translateY(-40px);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= MOBILE ================= */
+@media(max-width: 768px) {
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        display: none;
+        width: 200px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .video-box iframe {
+        width: 100%;
+        height: 250px;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donate | Quiet Light Foundation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="glass">
+    <div class="logo">Quiet Light Foundation</div>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="donate.html" class="highlight">Donate</a>
+    </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="section donate fade-up">
+    <h2>Make a Secure Donation</h2>
+    <p>Support our mission instantly using Bitcoin or PayPal. Every contribution matters!</p>
+</section>
+
+<!-- ================= DONATION SECTIONS ================= -->
+<section class="section fade-up">
+    <div class="donation-box">
+
+        <!-- ================= BITCOIN ================= -->
+        <h3>💰 Donate with Bitcoin</h3>
+        <img src="imagebitcoin.jpg" alt="Bitcoin QR Code" style="width:200px;margin:15px 0;">
+        <div class="btc-box">
+            <p class="label">Bitcoin Address</p>
+            <div class="btc-copy">
+                <span id="btcAddress">bc1qwc2wf5taqf0xm2s2sle5ccakghqmu7hpch8w9e</span>
+                <button id="copyBtn">Copy</button>
+            </div>
+        </div>
+        <a href="https://wa.me/+447415149452?text=Hello%20Quiet%20Light%20Foundation,%20I%20just%20made%20a%20Bitcoin%20donation."
+           target="_blank"
+           class="whatsapp-btn">
+            💬 Confirm Bitcoin Donation on WhatsApp
+        </a>
+
+        <form class="tx-form">
+            <p class="label">Transaction ID (Optional)</p>
+            <input type="text" placeholder="Enter Bitcoin Transaction ID">
+            <button type="submit">Submit</button>
+        </form>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ccc;">
+
+        <!-- ================= PAYPAL ================= -->
+        <h3>💳 Donate with PayPal</h3>
+        <p>Send your donation to our PayPal account and confirm via WhatsApp:</p>
+
+        <div class="btc-box">
+            <p class="label">PayPal Account</p>
+            <div class="btc-copy">
+                <span id="paypalAccount">your-paypal-email@example.com</span>
+                <button id="copyPaypalBtn">Copy</button>
+            </div>
+        </div>
+
+        <a href="https://wa.me/234XXXXXXXXXX?text=Hello%20Quiet%20Light%20Foundation,%20I%20just%20sent%20a%20PayPal%20donation."
+           target="_blank"
+           class="whatsapp-btn">
+            💬 Confirm PayPal Payment on WhatsApp
+        </a>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #ccc;">
+
+        <!-- ================= SUGGESTED DONATION AMOUNTS ================= -->
+        <h3>Suggested Donation Amounts</h3>
+        <p>Click an amount to copy the BTC or PayPal amount for convenience:</p>
+        <div class="cards">
+            <div class="card">💵 $10</div>
+            <div class="card">💵 $25</div>
+            <div class="card">💵 $50</div>
+            <div class="card">💵 $100</div>
+        </div>
+
+        <p style="margin-top:20px;font-size:14px;color:#555;">
+            All donations are secure and go directly to funding our humanitarian projects.
+        </p>
+
+    </div>
+</section>
+
+<!-- TOAST NOTIFICATION -->
+<div id="toast">Copied!</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
